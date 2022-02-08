@@ -220,8 +220,9 @@ class LinkedInBot:
 
 
 if __name__ == "__main__":
-    email = str(input('Please give your e-mail address: '))
-    password = str(input('Please give your password: '))
+    print('Logging in into LinkedIn.\n')
+    email = str(input('Your e-mail address: '))
+    password = str(input('Your password: '))
     keyword = str(input('Keyword(s) - space separated: '))
     location = str(input('Location: '))
     bot = LinkedInBot()
