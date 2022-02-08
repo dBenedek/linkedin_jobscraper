@@ -10,14 +10,14 @@ This Python script performs automatic job search on LinkedIn, based on the speci
 
 To install the required Python packages, you need to run the following command:
 
-```
+```bash
 pip install -r requirements.txt
 
 ```
 
 After installing the packages, you can run the LinkedIn bot:
 
-```
+```bash
 ./linkedin_scraper.py
 ```
 
