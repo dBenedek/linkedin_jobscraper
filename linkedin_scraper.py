@@ -223,7 +223,7 @@ class LinkedInBot:
 
 
 if __name__ == "__main__":
-    print('Logging in into LinkedIn.\n')
+    print('\nLogging in into LinkedIn.\n')
     email = str(input('Your e-mail address: '))
     password = str(input('Your password: '))
     keyword = str(input('Keyword(s) - space separated: '))
