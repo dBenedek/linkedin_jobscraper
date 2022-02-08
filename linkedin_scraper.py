@@ -33,7 +33,10 @@ class LinkedInBot:
         logging.basicConfig(level=logging.INFO, format=log_fmt)
         self.delay=delay
         logging.info("Starting driver")
-        self.driver = webdriver.Chrome()
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('--window-size=1920,1080')
+        chrome_options.add_argument('--headless')
+        self.driver = webdriver.Chrome(chrome_options=chrome_options)
 
     def login(self, email, password):
         """Go to linkedin and login"""
@@ -143,7 +146,7 @@ class LinkedInBot:
             n_applicants = 0
         else:
             n_applicants = re.sub('\sapplicant.*', '', n_applicants)
-        if job_type == 'Hide job':
+        if job_type in ['Hide job', 'Actively recruiting']:
                 job_type = 'NA'
         return [position, company, location, job_type, 
                 posted_time, n_applicants, job_insight, details]
