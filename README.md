@@ -8,6 +8,7 @@ This Python script performs automatic job search on LinkedIn, based on the speci
 
 ### Instructions
 
+First, you need Chrome driver (preferably version 98) which you can download [here](https://chromedriver.chromium.org/downloads). The driver should be added to your PATH.
 To install the required Python packages, you need to run the following command:
 
 ```bash
@@ -22,4 +23,4 @@ After installing the packages, you can run the LinkedIn bot:
 ```
 
 Once the job scraping has been finished, a directory will be created: `linkedin_data`.
-This folder contains an Excel file containing the jobs data with the following columns: `Position`, `Location`, `Job_type`, `Posted`, `Number_of_applicant`, and `Job_insight`.
+This folder contains an Excel file together with the jobs data with the following columns: `Position`, `Location`, `Job_type`, `Posted`, `Number_of_applicant`, and `Job_insight`.
