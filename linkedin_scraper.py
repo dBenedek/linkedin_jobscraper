@@ -17,6 +17,7 @@ import os
 import re
 import pandas as pd
 import numpy as np
+import getpass
 
 
 def safe_send_keys(driver, input_selector: str, input_text: str, selector_type = By.ID):
@@ -36,7 +37,7 @@ class LinkedInBot:
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--window-size=1920,1080')
         chrome_options.add_argument('--headless')
-        self.driver = webdriver.Chrome(chrome_options=chrome_options)
+        self.driver = webdriver.Chrome(options=chrome_options)
 
     def login(self, email, password):
         """Go to linkedin and login"""
@@ -223,9 +224,9 @@ class LinkedInBot:
 
 
 if __name__ == "__main__":
-    print('\nLogging in into LinkedIn.\n')
+    print('\nLogging in to LinkedIn.\n')
     email = str(input('Your e-mail address: '))
-    password = str(input('Your password: '))
+    password = getpass.getpass()
     keyword = str(input('Keyword(s) - space separated: '))
     location = str(input('Location: '))
     bot = LinkedInBot()
